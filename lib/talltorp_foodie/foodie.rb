@@ -3,7 +3,7 @@ require 'active_support/inflector'
 module TalltorpFoodie
   class Foodie
     def self.portray(food)
-      if food == "Broccoli"
+      if food.downcase == "broccoli"
         "Gross!"
       else
         "Delicious!"

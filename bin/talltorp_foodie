@@ -1,0 +1,3 @@
+#!/usr/bin/env ruby
+require 'talltorp_foodie/cli'
+TalltorpFoodie::CLI.start
