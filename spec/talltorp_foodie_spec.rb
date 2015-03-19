@@ -8,4 +8,8 @@ describe TalltorpFoodie::Foodie do
   it "anything else is delicious" do
     expect(TalltorpFoodie::Foodie.portray("Not Broccoli")).to eql("Delicious!")
   end
+
+  it "pluralizes a word" do
+    expect(TalltorpFoodie::Foodie.pluralize("Tomatoe")).to eql("Tomatoes")
+  end
 end
