@@ -1,5 +1,6 @@
 require 'thor'
 require "talltorp_foodie/foodie"
+require 'talltorp_foodie/generators/recipe'
 
 module TalltorpFoodie
   class CLI < Thor
@@ -13,6 +14,11 @@ module TalltorpFoodie
     method_option :word, :aliases => "-w"
     def pluralize
       puts TalltorpFoodie::Foodie.pluralize(options[:word])
+    end
+
+    desc "recipe", "Generates a recipe scaffold"
+    def recipe(group, name)
+      TalltorpFoodie::Generators::Recipe.start([group, name])
     end
   end
 end
